@@ -1,0 +1,19 @@
+C :
+Array declaration :
+    int A[1000]; // creates in stack memory an integer array of size 1000. 
+    int *A = (int *) malloc(1000 * sizeof(int)); // creates in heap memory an integer array of size 1000
+
+C++ :
+Vector declaration :
+    vector<int> V; // declares an empty integer array of size 0. O(1) 
+    vector<int> V(100, 1); // declares an integer array of size 100 with all elements initialized to 1. O(size)
+Accessing ith element :
+    V[i] // O(1)
+Size ( number of elements ) of the vector :
+    V.size()  // O(1)
+Adding element to the vector :
+    V.push_back(new_value); // new_value will be appended to the vector.  O(1)
+Removing element from end of the vector :
+    V.pop_back(); // equivalent to size--; O(1)
+
+
