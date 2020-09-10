@@ -39,3 +39,31 @@ vector<vector<int> > Solution::generateMatrix(int A) {
     }
     return v;
 }
+
+
+vector<vector<int> > Solution::generateMatrix(int A) {
+    int n = A;
+    vector< vector<int> > v(n, vector<int>(n, 0));
+    int top = 0, bottom = n-1;
+    int left = 0, right = n-1;
+    int i, k = 1;
+    while(k <= n*n){
+        for(i = left; i <= right; i++)  
+            v[top][i] = k++;
+        top++;
+      
+        for(i = top; i <= bottom; i++)
+            v[i][right] = k++;
+        right--;
+        
+        for(i = right; i >= left; i--)
+            v[bottom][i] = k++;
+        bottom--;
+        
+        for(i = bottom; i >= top; i--)
+            v[i][left] = k++;
+        left++;
+        
+    }
+    return v;
+}
