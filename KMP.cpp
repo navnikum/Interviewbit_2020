@@ -67,7 +67,7 @@ int main() {
 			if(j == lp){
 			        idx.push_back(i-j+2);
 			        cnt++;
-			        j = p[j-1];
+			        j = pi[j-1];
 			}
 		}
 		if(cnt == 0)
